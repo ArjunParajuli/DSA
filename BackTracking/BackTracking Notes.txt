@@ -1,0 +1,2 @@
+- Backtracking is basically recursion but does some action when recursive call returns.
+- Explores all possible solutions without revisiting a same solution twice.
