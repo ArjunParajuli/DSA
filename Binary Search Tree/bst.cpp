@@ -3,6 +3,10 @@
 using namespace std;
 
 /* 
+
+The height of a balanced binary tree or BST is approximately log₂(n).
+The height of a skewed binary tree or BST is n - 1.
+
 time for inserting: Average case time complexity: O(log n) for a balanced tree
  Worst case compl: O(n) for skewed(unbalanced) tree
 
@@ -48,7 +52,7 @@ Node * createBST(Node* root) {
 	int data;
 	cin >> data;
 
-// cin value and insert intoBST
+// cin value and insert into BST
 	while(data != -1) {
 		root = insertIntoBST(root, data);
 		cout << "Enter data:" << endl;

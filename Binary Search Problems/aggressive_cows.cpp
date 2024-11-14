@@ -3,13 +3,15 @@
 #include<algorithm>
 using namespace std;
 
+// pattern = minm of maxm / maxm of minm
+
 bool isPossibleSoln(int n, int k, vector<int> &stalls, int mid){
         // can we place k cows with atleast mid distance between them
         
         int cow = 1;
         int pos = stalls[0]; // place first cow in first index
         for(int i=1;i<n;i++){
-            if(stalls[i] - pos >= mid){ // place first cow
+            if(stalls[i] - pos >= mid){ // place cow
                 cow++;
                 pos = stalls[i]; // one more cow has been placed
             }

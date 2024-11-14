@@ -17,6 +17,9 @@ class Container{
 /*
 - create a min heap with first elms from all k arrays
 - pop the top(min) elm and push the next index elm of that popped elm
+
+Time Complexity: O(K^2 * log K), Insertion and deletion in a Min Heap requires log K time and for all K^2 elements it takes (K^2 * log K) time.
+Auxiliary Space: O(K), If Output vector is ignored then the only space required is the Min-Heap of K elements.
 */
 
 class Container{

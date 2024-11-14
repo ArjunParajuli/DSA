@@ -5,14 +5,24 @@ using namespace std;
 codehelp Graph class 4
 see notion graph notes for dryrun graph
 
-Dijkstra is a greedy algo(focuses on present best sol and not on long term best soln). 
+Dijkstra is a greedy algo(focuses on present best sol and not on long term best soln). It is used to find Shortest Paths from Source to all other Vertices in a weighted graph with non-negative edge weights. 
 We will use set/minheap here. (set is implemented thr Red-Black Tree, a kind of self-balancing BST. Insertion in O(logn) in set & O(1) avg in unordered_set) We can get minm elm in O(1) in both these data structures.
+
+
+Applications of Dijkstra’s Algorithm:
+Google maps uses Dijkstra algorithm to show shortest distance between source and destination.
+In computer networking , Dijkstra’s algorithm forms the basis for various routing protocols, such as OSPF (Open Shortest Path First).
 
 
 Limitations of Dijkstra:
 - Doesnt work for negative weights.
 - Doesnt work for negative cycles(cycle banri hai and uss cycle ka weight ka sum -ve hai).
 - Doesnt work for unreachable nodes(disconnected graph so ofc no path u idiot).
+
+Q)Can Dijkstra's algorithm be used on directed graphs?
+Answer: Yes, Dijkstra's algorithm can be applied to directed graphs. The algorithm works the same way as it does on undirected graphs
+
+
 
 
 algo:

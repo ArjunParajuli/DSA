@@ -7,6 +7,10 @@ striver YT
 algo: we can only take 1 or 2 two jumps
 - we start from end and at each step we call recursion for 1 step and for 2 step then return minimum of them 
 
+Q)Geek wants to climb from the 0th stair to the (n-1)th stair. At a time the Geek can climb either one or two steps.A height[N] array is also given. 
+Whenever the geek jumps from stair i to stair j, the energy consumed in the jump is abs(height[i]- height[j]), where abs() means the absolute difference.
+Return the minimum energy that can be used by the Geek to jump from stair 0 to stair N-1.
+
 */
 
 //1. recursion [start from end position]
@@ -105,6 +109,11 @@ int frogJumpSpaceOptimized(int n, vector<int> &heights) {
  /*
  My approach:
 start from index 0
+
+
+Time for recursive: O(2^n)
+
+Time for other: O(n)
  */
 
  // Memoization

@@ -10,7 +10,7 @@ void solve(vector<int>&nums,int k){
     // First window, 
     for(int i=0;i<k;i++){
         // agar curr num dq k last num se bada hai toh dq se pop karo before inserting the big num so that dq will store elms in decreasing order(maxm to min at end)
-        while(!dq.empty() && nums[i] >= nums[dq.back()]){
+        while(!dq.empty() && nums[i] > nums[dq.back()]){
             dq.pop_back();
         }
         // insert index
@@ -27,7 +27,7 @@ void solve(vector<int>&nums,int k){
         }
 
         // same step as above to maintain decreasing order
-        while(!dq.empty() && nums[i] >= nums[dq.back()]){
+        while(!dq.empty() && nums[i] > nums[dq.back()]){
             dq.pop_back();
         }
         // Insert the index 

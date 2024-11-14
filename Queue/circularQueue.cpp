@@ -24,9 +24,10 @@ class Queue{
 void Queue :: enqueue(int x){
    if((rear+1)%size == front)           // it checks if rear is right after front or not(eg. when front=0, rear=size-1 i.e queue full)
         cout << "\nQueue is  full\n";
-    else
+    else{
         rear = (rear+1)%size;       //moves rear one step ahead(eg. after 4(size-1), rear moves to 0 index again)
         arr[rear] = x;
+    }
 }
 
 void Queue :: dequeue(){

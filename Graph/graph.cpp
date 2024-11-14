@@ -3,9 +3,9 @@ using namespace std;
 
 /*
 
-Graph: It is a type of data structure which consisits of edges and nodes. Practical Application: google maps, facebook, etc.
+Graph: It is a type of non-linear data structure which consisits of edges and nodes. Practical Application: google maps, facebook, etc.
 - Node: contains data
-- Edge: connects nodes. Types: directional(has arrow) & undirectional edges. Efges can also have weights.
+- Edge: connects nodes. Types: directional(has arrow) & undirectional edges. Edges can also have weights.
 
 Cyclic graph: there exists at least one cycle, meaning a path that starts and ends at the same vertex, not necessary to visit all nodes.
 
@@ -36,6 +36,12 @@ List data structure: list(implemented as a doubly-linked list) is a container th
 */
 
 // using adjacency list
+/*
+space using adjacency list: 
+Directed Graph: Each of the 𝐸 edges is stored once, so the space required is O(V+E)
+Undirected Graph: Each of the 𝐸 edges is stored twice (once in each direction), so the space required is O(V+2E)
+
+*/
 class Graph{
     public:
     unordered_map<int, list<int>> adjList;  // node -> its neighbour nodes

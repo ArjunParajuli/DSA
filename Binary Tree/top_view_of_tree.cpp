@@ -17,7 +17,7 @@ struct Node
 - we take vertical level here, root ka verLvl 0 hoga, left jatey waqt verLvl decrement karo, right jatey waqt increment
 - harek verLvl par, uska top view elm rakho  
 
-Note: use map instead of unordered_map bcoz order is important in ans vector
+Note: use map instead of unordered_map bcoz sorted order is important in ans vector. The leftmost vertical level will be the samllest and will be stored at first place in map. 
 */
 vector<int> topView(Node *root){
     vector<int> ans;
@@ -46,6 +46,7 @@ vector<int> topView(Node *root){
         if(frontNode->right != NULL)
             q.push( {frontNode->right, verLvl+1} );
     }
+
     for(auto itr:mp){
         ans.push_back(itr.second);
     }

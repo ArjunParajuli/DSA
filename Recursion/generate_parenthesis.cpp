@@ -9,7 +9,7 @@ algo:
 - maintain count of open and close parenthesis
 - add open parenthesis only if open < n
 - we're allowed to add closing parenthesis only if count of open > count of close (to form valid parenthesis)
-- at each call, we have can make two calls add open or add close if valid conditions are met.
+- at each call, we can make two calls, add open or add close if valid conditions are met.
 */
 
     void generateParenthesis(vector<string> &ans,  string temp, int open, int close, int n){
@@ -17,17 +17,17 @@ algo:
             ans.push_back(temp);
             return;
         }
-        // we can insert open bcoz num of open brackets are left
         if(open != n){
-            string temp1 = temp;
-            temp1.push_back('(');
-            generateParenthesis(ans, temp1, open+1, close, n);
+            //string temp1 = temp;
+            temp.push_back('(');
+            generateParenthesis(ans, temp, open+1, close, n);
+            temp.pop_back();
         }
-        // we can insert close bcoz more number of open brackets are present than close brackets
         if(open > close){
-            string temp2 = temp;
-            temp2.push_back(')');
-            generateParenthesis(ans, temp2, open, close+1, n);
+            //string temp2 = temp;
+            temp.push_back(')');
+            generateParenthesis(ans, temp, open, close+1, n);
+            temp.pop_back();
         }
         return;
     }

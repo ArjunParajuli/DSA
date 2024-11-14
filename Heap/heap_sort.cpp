@@ -9,6 +9,14 @@ algo:  [heap sort using 0 based indexing]
 - do these two steps for all elms in array to get sorted array
 */
 
+/*
+Heap sort works by first building a max-heap from the input array and then repeatedly removing the largest element (the root of the heap) and placing it at the end
+ of the array. After placing the largest element at the end, we heapify the remaining elements to restore the heap property. This process is repeated until
+  the array is fully sorted.
+*/
+
+
+
 void heapify(int *arr, int n, int index){
     int leftChildIdx = 2*index+1;
     int rightChildIdx = 2*index+2;

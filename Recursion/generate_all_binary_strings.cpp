@@ -26,7 +26,7 @@ void generateBinary(int i, int n, int arr[]){
 }
 
 int main(){
-    int n = 2;
+    int n = 3;
     int arr[n];
     generateBinary(0, n, arr);
 

@@ -6,7 +6,7 @@ using namespace std;
 codehelp assignment DP
 
 algo:
-- create word after taking each letter from s & check if it is present in dictionary & if yes then call recursion for next letter
+- create word after taking each letter from s & check if it is present in dictionary & if yes then call recursion for doing the same for the remaining string
 
 */
 
@@ -58,8 +58,12 @@ bool solveMemo(string &s, vector<string>& wordDict, int start, vector<int> &dp){
         string word = "";
         for(int i=start;i<s.size();i++){
             word += s[i];
+            // word found in dict so, we call rec for remaining string, but we didnt break the loop so, it'll also continue with the same word and do rec call if found. 
             if(check(wordDict, word)){
-                ans = ans || solveMemo(s, wordDict, i+1, dp);
+                // eg, s="aaaa", wd=["aaa", "aaaa"], when we found word=aaa in dictionary, we make rec call for rem string i.e "a" but then we cant find "a" in the dictionary in next rec call and we return false. 
+                // So, we also need to continue searching without breaking the loop then word becomes "aaaa" and we find it in dict and we return true.
+                // Basically, "aaa" banneke baad vi rec call karo and also usi word ko continue karke "aaaa" banake vi rec call karo so that we cover all cases.
+                ans = ans || solveMemo(s, wordDict, i+1, dp); 
             }
         }
         return dp[start] = ans;

@@ -3,6 +3,27 @@
 using namespace std;
 
 /*
+A Binary Tree Data Structure is a hierarchical data structure in which each node has at most two children.
+
+Full Binary tree: Each node has either 0 or 2 children
+
+Complete BT: All levels are completely filled except the last level and the last level has nodes as left as possible.
+
+Perfect BT: ALl leaf nodes are at the same level.
+
+Balanced BT: A binary tree is balanced if the height of the tree is O(Log n) where n is the number of nodes.  For Example, the AVL tree maintains O(Log n) height
+		 by making sure that the difference between the heights of the left and right subtrees is at most 1. 
+		 Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root-to-leaf path is the same and that 
+		 Red nodes cannot have red children(a red node must have black children). All leaves (NIL nodes) are black. These are the null pointers. 
+		 The root of the tree is always black.
+		 Application:  Red-Black Trees are used in database indexing to maintain a balanced index, ensuring that searches, insertions, and deletions can be performed efficiently.
+
+
+Degenerate Binary Tree: Every non-leaf node has just one child in a binary tree known as a Degenerate Binary tree. The tree effectively transforms into a linked list as a result, with each node linking to its single child.
+
+NOTE:- If there are n nodes in a binary tree, the maximum height of the binary tree is n-1, and the minimum height is floor (log2(n)+1).
+Height of a tree is the number of nodes on the longest path from the root to a leaf, minus one.
+
 Note: Time and space complexity of preorder, inorder, postorder is O(n) and O(h) where h is height of tree.
 But the worst space complexity is O(n) incase of skewed trees, where n is number of nodes in tree
 so space is also O(n) for all 3 traversals

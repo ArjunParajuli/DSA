@@ -9,6 +9,7 @@ using namespace std;
 */
 
 
+
 // 1. recursion [apply loop to check minm betn all upto k steps]
 int solve(int n, int k, vector<int> &height, int i){
     if(i==0)
@@ -80,6 +81,7 @@ Another approach start from first index
 
 */
 
+// Time: O(k^n)
 int solve(vector<int>& height, int n, int k, int i){
         if(i >= n-1) return 0;
         
@@ -93,7 +95,7 @@ int solve(vector<int>& height, int n, int k, int i){
         return minCost;
     }
   
-  // memoization
+  // memoization:- Time Complexity: O(N *K)
     int minimizeCost(vector<int>& height, int n, int k) {
         return solve(height, n, k, 0);
     }

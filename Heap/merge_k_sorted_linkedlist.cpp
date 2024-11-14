@@ -14,6 +14,10 @@ class ListNode{
 
 /*
 logic very similar to merge k sorted arrays
+
+Time Complexity: O(n * k * log k) For simplicity of analysis, we assume that every list is of same size n. In general we can say, the time complexity is O(N log k) where N is the total numbers of nodes in all the lists.
+Auxiliary Space: O(k)
+
 */
 
     class Compare{
@@ -23,6 +27,7 @@ logic very similar to merge k sorted arrays
         }
     };
 
+// each elm in the lists array contains the head of each list
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         if(lists.size() == 0) return NULL;
 

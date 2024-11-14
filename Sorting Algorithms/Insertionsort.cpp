@@ -22,8 +22,6 @@ void insertionsort(int A[], int n){  // Mainly compatible for linked lists than 
         }
         A[j+1] = temp; // after shifting of elms is done, insert the temp elm in its right position
     }                            
-    
-        
 }
 
 int main(){

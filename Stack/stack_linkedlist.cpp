@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// To perform all the operations our head of the linked list would act as the top of the stack
+
 class Node{
     public:
     int data;

@@ -61,6 +61,7 @@ bool solveMemo(vector<int> &arr, int sum, int i, vector<vector<int>> &dp) {
 
 bool isSubsetSumMemoization(vector<int>arr, int sum){
     int n = arr.size();
+    // first check whether the answer(current sum value is already found before or not) is already calculated using the dp array
     vector<vector<int>> dp(n + 1, vector<int>(sum+1, -1));
     int i = n-1;
     return solveMemo(arr, sum, i, dp);
@@ -76,7 +77,7 @@ bool isSubsetSumTabulation(vector<int>arr, int sum){
     
     // for each row, mark 0th index as true (bcoz sum denotes col so we mark all col in 0th row as true)
     for(int i=0;i<n;i++){
-        dp[i][0] = true;  // for all cols=0, store 1 bcoz sum denotes col
+        dp[i][0] = true;  // for all first cols, store 1 bcoz sum denotes col
     }
     
     // second base case: insert true when i=0 & arr[0]=sum (so take memoization base case & replace i with 0 & sum with arr[i] i.e. arr[0])

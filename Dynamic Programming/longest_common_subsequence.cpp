@@ -91,6 +91,7 @@ int longestCommonSubsequenceTabulation(string text1, string text2){
         return dp[0][0]; // NOTE: jo recursive call mai pass kiya hai wahi index par milega ans
 }
 
+// follow below approach not this
 // 4. space optimization, NOTE: for 2d dp, space optimize to 1d array first and then to using 3 variables if possible  
 // ( dp[i][j] depends on dp[i+1][j+1], dp[i+1][j] and dp[i][j+1] hence we can do it using 1d array bcoz we just need next col array and curr col array )
 
@@ -122,7 +123,7 @@ int longestCommonSubsequenceSpaceOptimized(string text1, string text2){ // (O(n^
 
 }
 
-
+// follow this
 // without loop change ( every problem can be done without loop change also )
 // take size of both arr text2.size() bcoz we're moving rowwise & no. of cells in each row = number of cols of the matrix
 // so, no. of cols ke size ka hona chahiye both arrays and no. of cols ko text2.size() se denote kiya hai

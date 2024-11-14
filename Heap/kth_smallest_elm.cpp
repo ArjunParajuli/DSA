@@ -30,7 +30,8 @@ approach 2: using max heap: time-O(n), space: O(k)
     }
 
 
-// same algorithm just diff: using min heap and replacing top elm with larger elm than top elm bcoz we need larger elm 
+// same algorithm just diff: using min heap and replacing top elm with larger elm than top elm bcoz we need larger elm
+// among all elms, we only want k largest elms in our min heap and bcoz its a min heap, we'll have smallest among those k elms at top 
     int findKthLargest(vector<int>& nums, int k) {
         priority_queue<int, vector<int>, greater<int>> pq;
         for(int i=0;i<k;i++){

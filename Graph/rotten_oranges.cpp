@@ -7,6 +7,7 @@
  /*
  
  DFS se 'more than one rotten oranges in grid' wala case mai nahi chalega
+ Bcoz dfs will go in depth i.e. goes to each nbr and rottens it.
  so use BFS
  
  eg case :- grid=[[2 1 1], [1 1 1], [0 1 2]]

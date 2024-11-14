@@ -22,7 +22,7 @@ using namespace std;
         bool leftans = solve(root->left, lb, root->val); // sent upper bound value as root->val bcoz left subtree must have all vals less than root->val
         bool rightans = solve(root->right, root->val, ub); // sent lower bound value as root->val
 
-        // root->val betn lb & ub and both fet and right subtree must also be bst 
+        // root->val betn lb & ub and both left and right subtree must also be bst 
         if(root->val > lb && root->val < ub && leftans && rightans){
             return true;
         }

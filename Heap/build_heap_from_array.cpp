@@ -44,6 +44,28 @@ void heapify(int *arr, int n, int index){
         }
     }
 
+// heapify for min heap
+void minHeapify(int * arr, int n, int i){
+    int lc = 2*i+1;
+    int rc = 2*i+2;
+    
+    int lg = i;
+    
+    if(lc<n && arr[lc]<arr[lg]){
+        lg = lc;
+    } 
+    if(rc<n && arr[rc]<arr[lg]){
+        lg = rc;
+    }
+    
+    if(lg != i){
+        swap(arr[i], arr[lg]);
+        i = lg;
+        
+        minHeapify(arr, n, i);
+    }
+}
+
 int main(){
     int arr[] = {3, 4, 5, 7, 2};
     int n = sizeof(arr)/sizeof(arr[0]);

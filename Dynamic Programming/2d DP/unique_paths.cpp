@@ -10,7 +10,11 @@
     
     */
     
-    // recursive
+    /*
+    at most two recursive calls at each node. This leads to a tree-like structure where each node has at most two children.
+The depth of the tree is m + n - 2 (the number of moves to reach the bottom-right corner).
+     */
+    // recursive time: O(2^(m+n)) 
     int solve(int m, int n, int i, int j){
         // base
         if(i == m-1 && j == n-1)
@@ -34,7 +38,7 @@
     }
 
 
-    // memoization
+    // memoization time: O(m*n)
         int solve(int m, int n, int i, int j, vector<vector<int>> &dp){
         // base
         if(i == m-1 && j == n-1)
@@ -90,8 +94,7 @@
     // dp[i][j+1] can be denoted by curr[j+1] & dp[i+1][j] can be denoted by next[j] 
 
   int uniquePaths(int m, int n) {
-        // using row size
-        vector<int> next(n+1, 0);
+        vector<int> next(n+1, 0); // initially represents last row, so size will be n+1 
 
         for(int i=m-1;i>=0;i--){
             vector<int> curr(n+1, 0);

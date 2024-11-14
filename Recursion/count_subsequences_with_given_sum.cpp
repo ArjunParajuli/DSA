@@ -6,7 +6,7 @@ using namespace std;
 // time : O(2^n) bcoz for every index, we have two options
 // space : O(n)
 /*
- for every iex elm, we once take it and once don't take it
+ for every idx elm, we once take it and once don't take it
 */
 
 

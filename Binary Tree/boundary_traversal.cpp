@@ -4,6 +4,7 @@ using namespace std;
 
 /*
 boundary: first print leaf node, then left wala part until leaf node, then all leaf nodes and right wala part until root node
+algo: left boundary, leap boundary, right boundary in reverse order
 */
 struct Node
 {

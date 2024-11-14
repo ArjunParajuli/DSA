@@ -6,15 +6,16 @@ using namespace std;
 
 Striver YT
 
-greedy approach: take maxm for each row but wont work for all cases. so we must eplore all possible ways. i,e, recursion
+greedy approach: take maxm for each row but wont work for all cases. so we must explore all possible ways. i,e, recursion
 
 recursive approach:
 - we need to keep track of current day and last task performed on previous day. i.e.(day, last); initially last=3, no task performed 
-- 
 
 */
 
 // recursion
+// TC: O(3^n) states at max and we're running for loop 3 iteration in each state. 
+// SC: O(n) recursive stack space
  int solve(vector<vector<int>>& points, int n, int day, int last){
         if(day == n-1){
             int currMax = INT_MIN;
@@ -43,7 +44,7 @@ recursive approach:
         return solve(points, n, 0, 3);
     }
 
-    // memoization
+    // memoization time: O(N*4*3) space: O(n*4) size of dp arr
     int solve(vector<vector<int>>& points, int n, int day, int last, vector<vector<int>>&dp){
         if(dp[day][last] != -1) return dp[day][last];
         if(day == n-1){
@@ -66,7 +67,7 @@ recursive approach:
         }
         return dp[day][last] = maxm;
     }
-
+    
     // tabulation
     int maximumPoints(vector<vector<int>>& points, int n) {
         vector<vector<int>> dp(n+1, vector<int>(n+1, -1));
